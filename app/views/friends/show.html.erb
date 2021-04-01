@@ -1,29 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @friend.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @friend.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @friend.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @friend.phone %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
+<div class="jumbotron">
+  <h1><%= @friend.first_name.capitalize()%> <%= @friend.last_name.capitalize() %></h1>
+  <strong><span class="fa-stack"><i class="fa fa-envelope-square fa-stack-1x"></i></span></strong><%= @friend.email %><strong>
+  <span class="fa-stack"><i class="fa fa-phone fa-stack-1x"></i></span></strong>
+  <%= @friend.phone %><strong><span class="fa-stack"><i class="fa fa-square-o fa-twitter fa-stack-1x"></i></span></strong>
   <%= @friend.twitter %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_friend_path(@friend) %> |
-<%= link_to 'Back', friends_path %>
+<%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-primary" %>
+<%= link_to 'Back', friends_path, class: "btn btn-secondary" %>
