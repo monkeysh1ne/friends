@@ -30,9 +30,14 @@
         <%= form.text_field :phone, class: "form-control", placeholder:"Phone Number" %>
       </div>
 
-        <div class="field form-group mb-3">
+      <div class="field form-group mb-3">
         <%= form.text_field :twitter, class: "form-control", placeholder:"Twitter Handle (eg, '@mytwitterhandle'" %>
       </div>
+
+      <div class="field form-group mb-3">
+        <%= form.number_field :user_id, class: "form-control", placeholder:"User Id" %>
+      </div>
+
       <br/>
       <div class="actions">
         <%= form.submit class: "btn btn-success"%>
