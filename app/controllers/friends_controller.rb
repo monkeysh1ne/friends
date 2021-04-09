@@ -23,6 +23,7 @@ class FriendsController < ApplicationController
   # POST /friends or /friends.json
   def create
     @friend = Friend.new(friend_params)
+    @friend = 
 
     respond_to do |format|
       if @friend.save
@@ -65,5 +66,6 @@ class FriendsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def friend_params
+      params.require(:friend).permit(:first_name, :last_name, :email, :phone, :twitter, :user_id)
     end
 end
